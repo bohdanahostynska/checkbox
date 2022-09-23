@@ -1,0 +1,83 @@
+.fake{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 25%;
+    display: inline-block;
+    position: relative;
+}
+
+/* .fake::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+    left: 50%;
+    top: 50%;
+    /* display: none; */
+    /* opacity: 0;
+    transform: translate(-50%, -50%);
+}  */
+
+.fake::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: aqua;
+    left: 10%;
+    top: 50%;
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.fake::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: aqua;
+    left: 37%;
+    top: 50%;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+.checkbox:checked ~ .fake::before, .checkbox:checked ~ .fake::after{
+    opacity: 1;
+    transition: 1s;
+    /* display: block; */
+}
+
+.checkbox, .radio{
+    opacity: 0;
+}
+
+.fake-radio{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.fake-radio::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.radio:checked ~ .fake-radio::before{
+    opacity: 1;
+    transition: 1s;
+    /* display: block; */
+}

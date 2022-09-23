@@ -1,0 +1,42 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(167, 255, 255);
+    position: relative;
+    animation-name: toLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    /* animation-direction: alternate-reverse; */
+    animation-fill-mode: forwards;
+}
+
+.box:hover{
+    animation-play-state: paused;
+}
+
+@keyframes toLeft{
+    /* 0%{
+        left: 0;
+    }
+    25%{
+        left: 25px;
+        top: 20px;
+    }
+    75%{
+        left: 50px;
+        top: 10px;
+        background-color: beige;
+    }
+    100%{
+        left: 100px;
+        top: 0;
+    } */
+    from{
+        left: 0;
+    }
+    to{
+        left: 200px;
+    }
+}
